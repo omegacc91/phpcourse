@@ -18,10 +18,50 @@ source foodorder.sql;
 
 ## 四.系统设计
 管理员表（tbl_admin）
+| 字段名       | 描述       | 数据类型         | 是否主键 | 备注 |   
+|-----------|----------|--------------|------|----|
+| id        | 管理员ID    | int(10)      | PK   |
+| full_name | 管理员姓名    | varchar(100) |      | 
+| username  | 管理员登录用户名 | varchar(100) |      |  
+| password  | 用户密码     | varchar(255) |      |  
+
+
 
 美食分类表（tbl_category）
+| 字段名        | 描述     | 数据类型         | 是否主键 | 备注 |
+|------------|--------|--------------|------|----|
+| id         | 美食分类ID | int(10)      | PK   |    |
+| title      | 美食分类名称 | varchar(100) |      |    |
+| image_name | 图片名称   | varchar(255) |      |    |
+| featured   | 是否首页推荐 | varchar(10)  |      |    |
+| active     | 是否激活   | varchar(10)  |      |    |
+
 
 美食表（tbl_food）
+| 字段名         | 描述     | 数据类型          | 是否主键 | 备注 |
+|-------------|--------|---------------|------|----|
+| id          | 美食ID   | int(10)       | PK   |    |
+| title       | 美食名称   | varchar(100)  |      |    |
+| description | 美食描述   | text          |      |    |
+| price       | 价格     | decimal(10,2) |      |    |
+| image_name  | 图片名称   | varchar(255)  |      |    |
+| category_id | 美食分类ID | int(10)       |      |    |
+| featured    | 是否首页推荐 | varchar(10)   |      |    |
+| active      | 是否激活   | varchar(10)   |      |    |
+
 
 订单表（tbl_order）
+| 字段名              | 描述    | 数据类型          | 是否主键 | 备注 |
+|------------------|-------|---------------|------|----|
+| id               | 订单ID  | int(10)       | PK   |    |
+| food             | 美食名称  | varchar(150)  |      |    |
+| price            | 美食价格  | decimal(10,2) |      |    |
+| qty              | 购买份数  | int(11)       |      |    |
+| total            | 订单总金额 | decimal(10,2) |      |    |
+| order_date       | 下单时间  | datetime      |      |    |
+| status           | 订单状态  | varchar(50)   |      |    |
+| customer_name    | 用户姓名  | varchar(150)  |      |    |
+| customer_contact | 用户手机号 | varchar(20)   |      |    |
+| customer_email   | 用户邮箱  | varchar(150)  |      |    |
+| customer_address | 用户地址  | varchar(255)  |      |    |
 
