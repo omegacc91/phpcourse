@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 10, 2022 at 10:23 AM
+-- Generation Time: Sep 12, 2022 at 11:17 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -64,11 +64,11 @@ CREATE TABLE IF NOT EXISTS `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
-(4, 'æŠ«è¨', 'Food_Category_790.jpg', 'Yes', 'Yes'),
-(5, 'æ±‰å ¡', 'Food_Category_344.jpg', 'Yes', 'Yes'),
-(6, 'é¥ºå­', 'Food_Category_77.jpg', 'Yes', 'Yes'),
-(8, 'å°åƒ', 'Food_Category_125.jpg', 'No', 'Yes'),
-(9, 'é¢æ¡', 'Food_Category_520.jpg', 'Yes', 'Yes');
+(4, '披萨', 'Food_Category_790.jpg', 'Yes', 'Yes'),
+(5, '汉堡', 'Food_Category_344.jpg', 'Yes', 'Yes'),
+(6, '饺子', 'Food_Category_77.jpg', 'Yes', 'Yes'),
+(8, '面条', 'Food_Category_125.jpg', 'No', 'Yes'),
+(9, '饮料', 'Food_Category_520.jpg', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -94,12 +94,12 @@ CREATE TABLE IF NOT EXISTS `tbl_food` (
 --
 
 INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
-(3, 'ç´ é¦…é¥ºå­', 'Chicken Dumpling with herbs from Mountains', '5.00', 'Food-Name-3649.jpg', 6, 'Yes', 'Yes'),
+(3, '素馅饺子', 'Chicken Dumpling with herbs from Mountains', '5.00', 'Food-Name-3649.jpg', 6, 'Yes', 'Yes'),
 (4, 'Best Burger', 'Burger with Ham, Pineapple and lots of Cheese.', '4.00', 'Food-Name-6340.jpg', 5, 'Yes', 'Yes'),
 (5, 'Smoky BBQ Pizza', 'Best Firewood Pizza in Town.', '6.00', 'Food-Name-8298.jpg', 4, 'No', 'Yes'),
-(6, 'ç¾Šè‚‰é¥ºå­', 'Best Spicy Momo for Winter', '6.00', 'Food-Name-7387.jpg', 6, 'Yes', 'Yes'),
+(6, '羊肉饺子', 'Best Spicy Momo for Winter', '6.00', 'Food-Name-7387.jpg', 6, 'Yes', 'Yes'),
 (7, 'Mixed Pizza', 'Pizza with chicken, Ham, Buff, Mushroom', '10.00', 'Food-Name-7833.jpg', 4, 'Yes', 'Yes'),
-(9, 'é¸¡è‚‰æ±‰å ¡', 'å¥¥å°”è‰¯é¸¡è‚‰æ±‰å ¡', '8.00', 'Food-Name-5111.jpg', 5, 'Yes', 'Yes');
+(9, '牛肉汉堡', '美味好吃', '8.00', 'Food-Name-5111.jpg', 5, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `tbl_order` (
   `customer_email` varchar(150) NOT NULL,
   `customer_address` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_order`
@@ -132,8 +132,7 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 (2, 'Best Burger', '4.00', 4, '16.00', '2020-11-30 03:52:43', 'Delivered', 'Kelly Dillard', '+1 (908) 914-3106', 'fexekihor@mailinator.com', 'Incidunt ipsum ad d'),
 (3, 'Mixed Pizza', '10.00', 2, '20.00', '2020-11-30 04:07:17', 'Delivered', 'Jana Bush', '+1 (562) 101-2028', 'tydujy@mailinator.com', 'Minima iure ducimus'),
 (4, 'Dumplings Specials', '5.00', 1, '5.00', '2022-09-10 07:00:03', 'Ordered', '11', '11', 'omegacc@qq.com', '11'),
-(5, 'Dumplings Specials', '5.00', 1, '5.00', '2022-09-10 07:30:11', 'Ordered', 'æŽç™½', '17815055291', 'omegacc@qq.com', '14æ ‹222'),
-(6, 'Dumplings Specials', '5.00', 1, '5.00', '2022-09-10 07:31:27', 'Ordered', 'å¼ ä¸‰', '17815055290', 'omegacc@qq.com', '12æ ‹202');
+(9, '素馅饺子', '5.00', 1, '5.00', '2022-09-12 11:16:50', 'Ordered', '李飞', '17815055290', 'omegacc@qq.com', '12栋208');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
