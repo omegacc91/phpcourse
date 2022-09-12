@@ -1,0 +1,14 @@
+仙职食堂在线点餐系统
+
+项目是基于PHP、MySQL开发的在线点餐系统。
+
+一.需求背景
+在疫情期间，为避免学生返校后在学校食堂聚集买餐，引导学生通过线上点餐配送到学生宿舍，我们开发了仙职食堂在线点餐系统。
+
+二.系统部署
+1. 首先需要新建数据库
+create database foodorder default character set utf8 ;
+2. 导入备份的数据（备份数据在foodorder.sql）
+source foodorder.sql;
+3.将项目源文件部署到web服务器的根目录
+
