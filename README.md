@@ -18,7 +18,10 @@ source foodorder.sql;
 
 ## 四.系统设计
 管理员表（tbl_admin）
+
 美食分类表（tbl_category）
+
 美食表（tbl_food）
+
 订单表（tbl_order）
 
