@@ -6,9 +6,11 @@
 
 ## 二.系统部署
 1. 首先需要在MySQL中新建数据库
+
 create database foodorder default character set utf8 ;
 
 2. 导入备份的数据（备份数据在foodorder.sql）
+
 source foodorder.sql;
 
 3. 将项目源文件部署到web服务器的根目录
